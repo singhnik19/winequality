@@ -1,6 +1,5 @@
 Flask==1.1.1
 gunicorn==20.1.0
-numpy==2.11.1
 pandas==0.25.1
 jinja2==2.10.3
 MarkupSafe==1.1.1
