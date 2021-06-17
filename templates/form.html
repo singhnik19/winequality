@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body{
+      background-image:url('https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/9f/c5.jpg)
+     background-size: 100% 100%;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <title>Wine Quality Predictor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+<h1>Wine Quality Predictor</h1>
+<form method="POST">
+  <div class="mb-3">
+    <label for="fixedAcidity" class="form-label">Fixed Acidity</label>
+    <input type="number" class="form-control" id="fixedAcidity" step="any" name="fixedAcidity">
+  </div>
+ <div class="mb-3">
+    <label for="volatileAcidity" class="form-label">Volatile Acidity</label>
+    <input type="number" class="form-control" id="volatileAcidity" step="any" name="volatileAcidity">
+  </div><div class="mb-3">
+    <label for="citricAcid" class="form-label">Citric Acid</label>
+    <input type="number" class="form-control" id="citricAcid" step="any" name="citricAcid">
+  </div><div class="mb-3">
+    <label for="residualSugar" class="form-label">Residual Sugar</label>
+    <input type="number" class="form-control" id="residualSugar" step="any" name="residualSugar">
+  </div><div class="mb-3">
+    <label for="chlorides" class="form-label">Chlorides</label>
+    <input type="number" class="form-control" id="chlorides" step="any" name="chlorides">
+  </div><div class="mb-3">
+    <label for="freeSulphurDioxide" class="form-label">Free Sulphur Dioxide</label>
+    <input type="number" class="form-control" id="freeSulphurDioxide" step="any" name="freeSulphurDioxide">
+  </div><div class="mb-3">
+    <label for="totalSulphurDioxide" class="form-label">Total Sulphur Dioxide</label>
+    <input type="number" class="form-control" id="totalSulphurDioxide" step="any" name="totalSulphurDioxide">
+  </div><div class="mb-3">
+    <label for="density" class="form-label">Density</label>
+    <input type="number" class="form-control" id="density" step="any" name="density">
+  </div><div class="mb-3">
+    <label for="ph" class="form-label">pH</label>
+    <input type="number" class="form-control" id="ph" step="any" name="ph">
+  </div><div class="mb-3">
+    <label for="sulphates" class="form-label">Sulphates</label>
+    <input type="number" class="form-control" id="sulphates" step="any" name="sulphates">
+  </div><div class="mb-3">
+    <label for="alcohol" class="form-label">Alcohol</label>
+    <input type="number" class="form-control" id="alcohol" step="any" name="alcohol">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+   {% if quality %}
+    {% for variable, value in original_input.items() %}
+    <b>{{ variable }}</b> : {{ value }}
+    {% endfor %}
+    <br>
+    <br>
+    <p>Quality of Wine is {{ quality }}</p>
+    {% endif %}
+</form>
+</body>
+</html>
